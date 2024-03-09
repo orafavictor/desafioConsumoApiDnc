@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title> Desafio Consumo APIs |Rafa Victor </title>
+</head>
+<body>
+    <nav class="mainMenu">
+        <h1> DncWeather </h1>
+        <div id="links"> 
+            <a href="#formInfo"> Endereços </a>
+            <a href="#previsao"> Previsão do tempo </a>
+        </div>
+    </nav>
+
+
+        <div class="menu">
+
+            <p id="textMenu">
+                Descubra Mais com Precisão:<br>
+                Previsões do Tempo e endereços<br>
+                em tempo real.
+            </p>
+
+            <div><img id="nuvem" src="./img/nuvem.svg" alt="ERROR"></div>
+
+        </div>
+
+        <section id="formInfo">
+
+            <p class="form"> Primeiro Nome: </p>
+            <input class="info" type="text" placeholder="Insira seu primeiro nome:" name="Name" required>
+
+            <p class="form"> E-mail: </p>
+            <input class="info" type="email" placeholder="Insira seu e-mail" name="Email" required>
+
+            <p class="form"> Digite o CEP: </p>
+            <input class="info" type="text" placeholder="Insira o CEP" name="cep" required id="cep">
+
+            <p class="form"> Digite a latitude e longitude para saber a previsão: </p>
+            <input class="infoLatLong" type="text" placeholder="Latitude" id="latitude"> 
+            <input class="infoLatLong" type="text" placeholder="Longitude" id="longitude"><br>
+            <button type="submit" id="button" onclick="start()">Acessar</button>
+            
+        </section>
+
+        <section id="resultAddress">
+
+            <div>
+                <h1> Resultado da busca por CEP: <img src="./img/loc.svg" alt="ERROR"> </h1>
+            </div>
+
+            <div id="cepResult">
+                <p> Logradouro/Nome </p>
+                <p> Bairro/Distrito </p>
+                <p> Localidade/UF </p>
+            </div>
+
+            <div id="cepResultAnswer">
+                <input type="text" readonly id="rua">
+                <input type="text" readonly id="bairro">
+                <input type="text" readonly id="localidade">
+            </div>
+
+        </section>
+
+        <section id="previsao">
+
+            <div>
+                <h1> Previsão do tempo na região: <img src="./img/temp.svg" alt="ERROR"></h1>
+            </div>
+
+            <div id="previsaoResult">
+            Previsão de tempo de acordo com a região:  <input type="text" readonly id="weatherResult">
+            </div>
+
+        </section>
+
+        <nav id="footer">
+    
+            <div id="terms">
+                <p> Termos de Uso | Política de Privacidade </p>
+            </div>
+        </nav>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
